@@ -1,3 +1,9 @@
+body {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
 .circle {
     /* padding: 20px 20px; */
     width: 200px;
@@ -17,4 +23,7 @@
     width: 200px;
     height: 100px;
     background-color: crimson;
+    position: fixed;
+    top: 0;
+    left: 0;
 }

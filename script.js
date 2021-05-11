@@ -73,12 +73,12 @@ document.querySelectorAll(".square").forEach(function(box) {
 
 
 
-gsap.set(".slide", {xPercent: -100, yPercent: -100});
+gsap.set(".slide", {xPercent: -50, yPercent: -50});
 
 const ball = document.querySelector(".slide");
-const pos = { x: window.innerWidth / 10, y: window.innerHeight / 10 };
+const pos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
 const mouse = { x: pos.x, y: pos.y };
-const speed = .15;
+const speed = .35;
 
 const xSet = gsap.quickSetter(ball, "x", "px");
 const ySet = gsap.quickSetter(ball, "y", "px");
