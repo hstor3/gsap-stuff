@@ -11,7 +11,7 @@ gsap.registerEffect({
     defaults: {duration: 2}, 
     // delay: 5,
     effect: (targets, config) => {
-        return gsap.to(targets, {duration: config.duration, opacity: 0});
+        return gsap.to(targets, {duration: config.duration, opacity: 0, delay: 0.2});
     },
     extendTimeline: true,
 });
