@@ -1,3 +1,4 @@
+// circle
 gsap.fromTo(
     ".circle",
     { opacity: 0, y: -25, scale: 0 },
@@ -8,19 +9,40 @@ gsap.fromTo(
 gsap.registerEffect({
     name: "fade",
     defaults: {duration: 2}, 
+    // delay: 5,
     effect: (targets, config) => {
         return gsap.to(targets, {duration: config.duration, opacity: 0});
-    }
+    },
+    extendTimeline: true,
 });
-
-// rotates the square
-gsap.to(".square", {rotation: 27, x: 100, duration: 1});
 
 document.querySelectorAll(".square").forEach(function(box) {
   box.addEventListener("mouseenter", function() {
     gsap.effects.fade(this);
   });
 });
+
+// unfades
+gsap.registerEffect({
+    name: "unfade",
+    defaults: {duration: 4}, 
+    // delay: 5,
+    effect: (targets, config) => {
+        return gsap.to(targets, {duration: config.duration, opacity: 2, delay: 2});
+    },
+    extendTimeline: true,
+
+});
+
+document.querySelectorAll(".square").forEach(function(box) {
+    box.addEventListener("mouseleave", function() {
+      gsap.effects.unfade(this);
+    });
+  });
+
+// rotates the square
+gsap.to(".square", {rotation: 27, x: 100, duration: 1});
+
 
 // rectangle that follows the mouse
 gsap.set(".slide", {xPercent: -50, yPercent: -50});
