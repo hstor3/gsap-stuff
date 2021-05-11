@@ -25,10 +25,10 @@ document.querySelectorAll(".square").forEach(function(box) {
 // unfades
 gsap.registerEffect({
     name: "unfade",
-    defaults: {duration: 4}, 
+    defaults: {duration: 3}, 
     // delay: 5,
     effect: (targets, config) => {
-        return gsap.to(targets, {duration: config.duration, opacity: 2, delay: 2});
+        return gsap.to(targets, {duration: config.duration, opacity: 1, delay: 2});
     },
     extendTimeline: true,
 
